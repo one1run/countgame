@@ -224,9 +224,10 @@ export default function App() {
         </div>
 
         {/* Modals */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {gameState !== 'playing' && (
             <motion.div 
+              key="modal"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               className="absolute inset-0 z-50 flex items-center justify-center bg-white/60 backdrop-blur-md rounded-[2.5rem]"
             >
